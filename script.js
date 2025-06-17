@@ -6,6 +6,7 @@ $(document).ready(function () {
         { title: "NgayXuanLongPhungSumVay", src: "NgayXuanLongPhungSumVay.mp3" },
         { title: "XuanOiOLaiChoi", src: "XuanOiOLaiChoi.mp3" },
 		{ title: "One of the Greatest Speeches Ever  Steve Jobs_320kbpsi", src: "One of the Greatest Speeches Ever  Steve Jobs_320kbps.mp3" },
+		{ title: "Cheri-Cheri-Lady", src: "Cheri-Cheri-Lady.mp3" },
     ];
     var currentTrack = 0;
     var isLooping = false; // Trạng thái loop
