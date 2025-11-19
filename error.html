@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trang báo lỗi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-100 p-6">
+  <main class="w-full max-w-2xl">
+    <section class="bg-white shadow-lg rounded-2xl p-8 md:p-12 border border-gray-100">
+      <div class="flex items-start gap-6">
+        <!-- Icon -->
+        <div class="flex-shrink-0">
+          <div class="w-20 h-20 rounded-full bg-red-50 flex items-center justify-center border border-red-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="flex-1">
+          <h1 class="text-3xl md:text-4xl font-semibold text-gray-800">Đã xảy ra lỗi</h1>
+          <p class="mt-2 text-sm text-gray-500">Xin lỗi, không thể hoàn tất yêu cầu của bạn lúc này. Vui lòng thử lại hoặc quay về trang chủ.</p>
+
+          <div class="mt-6 flex items-center gap-4">
+            <span class="inline-flex items-center px-3 py-1.5 rounded-full bg-red-50 text-red-700 text-sm font-medium border border-red-100">Lỗi 500</span>
+            <span class="text-sm text-gray-500">ID: <span class="font-mono text-gray-700">#A1B2C3</span></span>
+          </div>
+
+          <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
+            <a href="/" class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium shadow">Về trang chủ</a>
+            <button onclick="location.reload()" class="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-700">Thử lại</button>
+          </div>
+
+          <div class="mt-6 text-xs text-gray-400">
+            Nếu lỗi vẫn tiếp diễn, liên hệ bộ phận hỗ trợ kèm mã lỗi bên trên.
+          </div>
+        </div>
+      </div>
+
+      <!-- Optional: Debug / Details -->
+      <details class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-100 text-sm text-gray-600">
+        <summary class="cursor-pointer font-medium">Chi tiết kỹ thuật (mở)</summary>
+        <pre class="mt-2 text-xs font-mono text-gray-700">Exception: System.NullReferenceException\nAt: /src/Service/Handler.cs:line 142</pre>
+      </details>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-6 text-center text-xs text-gray-400">© <span id="year"></span> Công ty của bạn. Mọi quyền được bảo lưu.</footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
